@@ -1,11 +1,16 @@
-_PLOP COMMANDS_
-_to generate a new component_
-cd psu-component-lib
-npm run component
+## Install npm dependencies with
 
-_STORYBOOK_
-npm run storybook
+`npm install --legacy-peer-deps`
 
-_PUBLISH CHANGES_
-npm login
-npm publish
+## Start storybook dev host
+
+`npm run storybook`
+
+## To make new component
+
+`npm run component`
+
+## Publish changes
+
+`npm login`
+`npm publish`
