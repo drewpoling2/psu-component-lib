@@ -1,0 +1,190 @@
+@import 'fonts.css';
+
+ul {
+  list-style-type: square;
+  color: #009cde;
+}
+* {
+  transition: all 0.2s ease-out;
+}
+a {
+  cursor: pointer;
+  color: #005fa9;
+  font-family: 'roboto-bold';
+  text-decoration: underline;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: 'roboto-bold';
+}
+p {
+  font-family: 'roboto-regular';
+  color: #444444;
+  line-height: 33px;
+  font-size: 23px;
+  font-weight: 400;
+}
+h2,
+h1 {
+  font-size: 55px;
+  margin-top: 0px;
+  margin-bottom: 32px;
+}
+h2 {
+  font-size: 22px;
+  margin-bottom: 32px;
+}
+
+input {
+  border-radius: 0px;
+  border: 1px solid #e4e4e4;
+  background-color: #f9f9f9;
+  color: #444444 !important;
+}
+
+.hide {
+  display: none;
+}
+
+.flex {
+  display: flex;
+}
+
+.inline-flex {
+  display: inline-flex;
+}
+
+.justify-center {
+  justify-content: center;
+}
+
+.justify-between {
+  justify-content: space-between;
+}
+
+.justify-end {
+  justify-content: flex-end;
+}
+
+.justify-around {
+  justify-content: space-around;
+}
+
+.items-end {
+  align-items: flex-end;
+}
+
+.items-center {
+  align-items: center;
+}
+
+.content-center {
+  align-content: center;
+}
+
+.flex-col {
+  display: flex;
+  flex-direction: column;
+}
+
+.flex-row {
+  display: flex;
+  flex-direction: row;
+}
+
+.uppercase {
+  text-transform: uppercase;
+}
+
+.capitalize {
+  text-transform: capitalize;
+}
+
+.italic {
+  font-style: italic;
+}
+
+.pointer {
+  cursor: pointer;
+}
+
+.w-full {
+  width: 100%;
+}
+
+.w-fit {
+  width: fit-content;
+}
+
+.h-full {
+  height: 100%;
+}
+
+.h-fit {
+  height: fit-content;
+}
+
+.bg-center {
+  background-position: center;
+}
+
+.bg-no-repeat {
+  background-repeat: no-repeat;
+}
+
+.bg-cover {
+  background-size: cover;
+}
+
+.bg-auto {
+  background-size: auto;
+}
+
+.bg-contain {
+  background-size: contain;
+}
+
+.absolute {
+  position: absolute;
+}
+
+.fixed {
+  position: fixed;
+}
+
+.relative {
+  position: relative;
+}
+
+.sticky {
+  position: sticky;
+}
+
+.decoration-none {
+  text-decoration: none;
+}
+
+.z-top {
+  z-index: 100;
+}
+
+.z-middle {
+  z-index: 50;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-left {
+  text-align: left;
+}
+
+.text-right {
+  text-align: right;
+}
