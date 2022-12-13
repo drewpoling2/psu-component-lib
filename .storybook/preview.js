@@ -5,4 +5,10 @@ export const parameters = {
   docs: {
     theme: previewTheme,
   },
+  layout: 'centered',
+  options: {
+    storySort: {
+      order: ['Getting Started', '*'],
+    },
+  },
 };

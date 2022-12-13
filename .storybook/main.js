@@ -7,13 +7,14 @@ module.exports = {
   core: {
     builder: 'webpack5',
   },
-  stories: ['../src/**/*.stories.[tj]s'],
+  stories: ['../src/**/*.stories.mdx', '../src/**/*.stories.@(js|jsx|ts|tsx)'],
   addons: [
     {
       name: '@storybook/addon-essentials',
     },
     '@storybook/addon-a11y',
     '@storybook/addon-links',
+    '@storybook/addon-docs',
   ],
   webpackFinal: (config, options) => {
     if (!config.resolve.fallback) {
