@@ -64,7 +64,7 @@ export const TextField = ({
       {required && (
         <div className="flex-row">
           <p sx={{ fontSize: 'xs', m: 0, color: 'mediumGray' }}>Required </p>
-          <p sx={{ fontSize: 'xs', m: 0, color: 'mediumGray' }}> &nbsp;*</p>
+          <p sx={{ fontSize: 'xs', m: 0, color: 'mediumGray' }}>&nbsp;*</p>
         </div>
       )}
       <input
@@ -111,11 +111,6 @@ TextField.propTypes = {
    * Optional required styling & specifies input field must be filled out before submitting
    */
   required: PropTypes.bool,
-
-  /**
-   * Optional props
-   */
-  props: PropTypes.any,
 };
 
 TextField.defaultProps = {

@@ -47,6 +47,10 @@ input {
   color: #444444 !important;
 }
 
+.disappear {
+  opacity: 0;
+}
+
 .hide {
   display: none;
 }

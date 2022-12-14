@@ -225,6 +225,17 @@ const theme = {
       display: 'block',
     },
   },
+  dividers: {
+    dashed: {
+      borderStyle: 'dashed',
+    },
+    dotted: {
+      borderStyle: 'dotted',
+    },
+    solid: {
+      borderStyle: 'solid',
+    },
+  },
   buttons: {
     default: {
       backgroundImage: () =>
