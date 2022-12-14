@@ -188,3 +188,8 @@ input {
 .text-right {
   text-align: right;
 }
+
+.disabled {
+  cursor: not-allowed;
+  opacity: 0.5;
+}

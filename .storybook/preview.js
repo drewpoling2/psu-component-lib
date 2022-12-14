@@ -11,4 +11,10 @@ export const parameters = {
       order: ['Getting Started', '*'],
     },
   },
+  controls: {
+    matchers: {
+      color: /(background|color)$/i,
+      date: /Date$/,
+    },
+  },
 };

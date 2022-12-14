@@ -5,8 +5,18 @@ import theme from '../../theme';
 import PropTypes from 'prop-types';
 
 /**
- * Primary UI component for user interaction
- */
+ * Buttons allow users to take actions, and make choices, with a single tap.
+ * They communicate actions that users can take. They are typically placed throughout your UI, in places like:
+
+<li>Modal windows</li>
+<li>Forms</li>
+<li>Cards</li>
+<li>Toolbars</li>
+<br>
+<br>
+<h3>Basic Button</h3>
+The Button comes with three variants: default, outlinedNavSecondary, and hotline.
+*/
 
 export const Button = ({
   onClick,
@@ -43,30 +53,32 @@ export const Button = ({
 
 Button.propTypes = {
   /**
-   * Is this the principal call to action on the page?
+   * String representing href or external link for routing
    */
-  primary: PropTypes.bool,
+  to: PropTypes.string,
   /**
-   * What background color to use
+   * What variant should the button be?
    */
-  backgroundColor: PropTypes.string,
-  /**
-   * How large should the button be?
-   */
-  size: PropTypes.oneOf(['small', 'medium', 'large']),
+  variant: PropTypes.oneOf(['default', 'hotline', 'outlinedNavSecondary']),
   /**
    * Button contents
    */
-  label: PropTypes.string.isRequired,
+  text: PropTypes.string.isRequired,
   /**
    * Optional click handler
    */
   onClick: PropTypes.func,
+  /**
+   * Optional disabled state
+   */
+  disabled: PropTypes.bool,
+  /**
+   * Optional props
+   */
+  props: PropTypes.any,
 };
 
 Button.defaultProps = {
-  backgroundColor: null,
-  primary: false,
-  size: 'medium',
-  onClick: undefined,
+  variant: 'default',
+  text: 'Button',
 };

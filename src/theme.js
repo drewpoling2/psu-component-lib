@@ -80,7 +80,6 @@ const theme = {
     brightKeystone: '#ffd100',
     mediumGray: '#727272',
     background: '#fff',
-    oldCoaly: '#444',
     limestone: '#a2aaad',
     limestoneLight: '#E4E5E7',
     limestoneMaxLight: '#f2f2f4',
@@ -88,11 +87,10 @@ const theme = {
     slateLight: '#ccdae6',
     slateMaxLight: '#eef3f7',
     lionShring: '#b88965',
-    lionShrineLight: '#f7f2ee',
-    lionShrineMaxLight: '#fdfbf5',
     lionsRoar: '#bf8226',
     lionsRoarLight: '#f9eddc',
     lionsRoarMaxLight: '#fffaf2',
+    disabled: '#f4f4f4',
     text: '#000',
 
     transparent: 'transparent',
@@ -293,15 +291,21 @@ const theme = {
       },
     },
   },
-  arrows: {
-    navDropdown: {
-      color: 'blackPS',
-      position: 'absolute',
-      height: '20px',
-      width: '20px',
+  textFields: {
+    standard: {
+      backgroundColor: 'none',
+      borderBottom: '2px solid #a2aaad',
+      borderTop: 'none',
+      borderRight: 'none',
+      borderLeft: 'none',
     },
+    outlined: {
+      backgroundColor: 'none',
+      border: '1px solid #a2aaad',
+      borderRadius: '2px',
+    },
+    filled: { backgroundColor: '#E4E5E7', borderRadius: '2px' },
   },
-
   //built in style object
   styles: {
     root: {

@@ -1,3 +1,4 @@
+/* eslint-disable no-undef */
 /** @jsx jsx */
 import { jsx, Container } from 'theme-ui';
 import { useState } from 'react';
@@ -80,4 +81,19 @@ export const Form = ({ fieldTextOne, fieldTextTwo, fieldTextThree }) => {
       </div>
     </Container>
   );
+};
+
+Form.propTypes = {
+  /**
+   * String placeholder 1
+   */
+  fieldTextOne: PropTypes.string,
+  /**
+   * String placeholder 2
+   */
+  fieldTextTwo: PropTypes.string,
+  /**
+   * String placeholder 3
+   */
+  fieldTextThree: PropTypes.string,
 };

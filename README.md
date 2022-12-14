@@ -6,6 +6,14 @@
 
 `npm run storybook`
 
+## To reformat all files
+
+`npm run format`
+
+## To check formatting
+
+`npm run lint:format`
+
 ## To make new component
 
 `npm run component`

@@ -15,6 +15,7 @@ module.exports = {
     '@storybook/addon-a11y',
     '@storybook/addon-links',
     '@storybook/addon-docs',
+    '@storybook/addon-interactions',
   ],
   webpackFinal: (config, options) => {
     if (!config.resolve.fallback) {

@@ -1,4 +1,4 @@
-/* eslint-disable import/no-anonymous-default-export */
+/* eslint-disable no-undef */
 module.exports = function (plop) {
   plop.setGenerator('component', {
     description: 'Atomic Design component creation logic',
@@ -9,7 +9,7 @@ module.exports = function (plop) {
         message: 'Please enter the component name',
       },
     ],
-    actions: function (data) {
+    actions: function () {
       var actions = [];
 
       actions.push(

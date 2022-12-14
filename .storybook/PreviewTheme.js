@@ -8,8 +8,8 @@ export default create({
   colorSecondary: theme.colors.beaverBlue,
 
   // UI
-  appBg: theme.colors.nittanyNavy,
-  appContentBg: theme.colors.whiteout,
+  appBg: theme.colors.limestoneLight,
+  appContentBg: '#EFF2F5',
   appBorderColor: theme.colors.whiteout,
   appBorderRadius: 3,
 
@@ -18,7 +18,7 @@ export default create({
   fontCode: 'monospace',
 
   // Text colors
-  textColor: theme.colors.endlessPotential,
+  textColor: theme.colors.oldCoaly,
   textInverseColor: 'rgba(255,255,255,0.9)',
 
   // Toolbar default and active colors

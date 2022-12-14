@@ -32,7 +32,6 @@ export const TopicPageHeader = ({
         >
           {topicPageHeaderTitle}
         </h1>
-
         <p
           sx={{
             fontFamily: 'roboto-regular',

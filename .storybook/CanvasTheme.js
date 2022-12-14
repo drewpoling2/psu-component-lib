@@ -4,13 +4,13 @@ import theme from '../src/theme';
 export default create({
   base: 'dark',
 
-  colorPrimary: theme.colors.beaverBlue,
+  colorPrimary: theme.colors.creek,
   colorSecondary: theme.colors.beaverBlue,
 
   // UI
   appBg: theme.colors.nittanyNavy,
-  appContentBg: theme.colors.whiteout,
-  appBorderColor: theme.colors.whiteout,
+  appContentBg: '#EFF2F5',
+  appBorderColor: theme.colors.limestoneMaxLight,
   appBorderRadius: 3,
 
   // Typography
@@ -18,7 +18,7 @@ export default create({
   fontCode: 'monospace',
 
   // Text colors
-  textColor: theme.colors.limestoneLight,
+  textColor: theme.colors.oldCoaly,
   textInverseColor: 'rgba(255,255,255,0.9)',
 
   // Toolbar default and active colors
@@ -29,7 +29,7 @@ export default create({
   // Form colors
   inputBg: theme.colors.whiteout,
   inputBorder: theme.colors.limestoneLight,
-  inputTextColor: theme.colors.endlessPotential,
+  inputTextColor: theme.colors.oldCoaly,
   inputBorderRadius: 3,
 
   brandTitle: 'PSU gatsby&contentful storybook',

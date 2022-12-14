@@ -1,0 +1,29 @@
+// File: .eslintrc
+
+{
+  "root": true,
+  "extends": [
+    "eslint:recommended",
+    "plugin:react/recommended",
+    "plugin:react-hooks/recommended",
+    "prettier"
+  ],
+  "settings": {
+    "react": {
+      "version": "detect"
+    }
+  },
+  "parserOptions": {
+    "sourceType": "module",
+    "ecmaVersion": 2020
+  },
+
+  "rules": {
+    "react/no-unknown-property": [
+      2,
+      {
+        "ignore": ["jsx", "sx"]
+      }
+    ]
+  }
+}

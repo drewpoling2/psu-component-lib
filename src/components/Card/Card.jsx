@@ -1,6 +1,6 @@
+/* eslint-disable no-undef */
 /** @jsx jsx */
-import { jsx, Styled } from 'theme-ui';
-import { documentToReactComponents } from '@contentful/rich-text-react-renderer';
+import { jsx } from 'theme-ui';
 import { Link } from 'gatsby';
 
 export const Card = ({ item, index }) => {
