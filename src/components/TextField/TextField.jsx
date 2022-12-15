@@ -38,26 +38,13 @@ export const TextField = ({
     },
   };
 
-  const s = { ...baseSx, p: 2, fontSize: 's' };
-  const m = { ...baseSx, p: 3, fontSize: 'm' };
-  const lg = { ...baseSx, p: 4, fontSize: 'lg' };
-
-  const sxVar = () => {
-    switch (size) {
-      case 's': {
-        return s;
-      }
-      case 'm': {
-        return m;
-      }
-      case 'lg': {
-        return lg;
-      }
-      default: {
-        return m;
-      }
-    }
+  const sizeObj = {
+    s: { p: 2, fontSize: 's', ...baseSx },
+    m: { p: 3, fontSize: 'm', ...baseSx },
+    lg: { p: 4, fontSize: 'lg', ...baseSx },
   };
+
+  const sxVar = sizeObj[size];
 
   return (
     <ThemeProvider theme={theme}>
@@ -96,11 +83,6 @@ TextField.propTypes = {
    * Size options
    */
   size: PropTypes.oneOf(['s', 'm', 'lg']),
-
-  /**
-   * TextField contents
-   */
-  text: PropTypes.string,
 
   /**
    * Optional disabled state

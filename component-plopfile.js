@@ -25,8 +25,8 @@ module.exports = function (plop) {
         },
         {
           type: 'add',
-          path: './src/components/{{pascalCase name}}/{{pascalCase name}}.composition.jsx',
-          templateFile: 'plop-templates/composition.jsx.hbs',
+          path: './src/stories/{{pascalCase name}}.stories.jsx',
+          templateFile: 'plop-templates/stories.jsx.hbs',
         }
       );
 

@@ -1,8 +1,35 @@
-/** @jsx jsx */ import { jsx } from 'theme-ui'; import React from 'react';
-import PropTypes from 'prop-types'; export const
-{{pascalCase name}}
-= ({props}) => { return (
-<div>This is the {{pascalCase name}} component</div>
-); };
+/** @jsxRuntime classic */
+/** @jsx jsx */
+import { jsx, Container, ThemeProvider } from 'theme-ui';
+import React from 'react';
+import theme from '../../theme';
+import { graphql } from 'gatsby';
+import PropTypes from 'prop-types';
+import '../../global.css';
 
-{{pascalCase name}}.propTypes = { };
+/** * {{pascalCase name}} ui component 
+<br>
+<br>
+<h3>Basic {{pascalCase name}}</h3>
+{{pascalCase name}} description */
+
+export const {{pascalCase name}} = ({ extraSx }) => { 
+    return (
+        <div>This is the {{pascalCase name}} component</div>
+); 
+};
+
+{{pascalCase name}}.propTypes = {
+ /** * Optional extra sx props for styling using the theme object */
+  extraSx: PropTypes.any,
+};
+
+{{pascalCase name}}.defaultProps = {};
+
+
+{{!-- only needed if creating a component fragment for contentful data --}}
+export const query = graphql`
+  {{!-- fragment ComponentContent on Component {
+    
+  } --}}
+`;

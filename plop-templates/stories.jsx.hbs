@@ -1,0 +1,17 @@
+/* eslint-disable no-undef */
+import React from 'react';
+import {{{pascalCase name}}} from '../components/{{pascalCase name}}';
+
+const component = {{pascalCase name}};
+
+export default {
+  title: component.name || component.displayName || 'undefined component name',
+  component: component,
+};
+
+const Template = (args) => <{{pascalCase name}} {...args} />;
+
+export const Default = Template.bind({});
+Default.args = {};
+
+

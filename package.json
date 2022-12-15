@@ -10,7 +10,7 @@
     "build-storybook": "build-storybook",
     "build-lib": "rollup -c",
     "eject": "react-scripts eject",
-    "component": "npm plop --plopfile ./component-plopfile.js",
+    "component": "yarn plop --plopfile ./component-plopfile.js",
     "format": "prettier --write .",
     "lint:format": "prettier --check .",
     "lint": "eslint src/**"

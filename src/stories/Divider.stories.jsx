@@ -13,15 +13,15 @@ const Template = (args) => (
   <ThemeProvider theme={theme}>
     {args.orientation && args.orientation === 'horizontal' && (
       <div className="flex-col" sx={{ minWidth: '45vw' }}>
-        <h1 sx={{ mb: 3 }}>Heading</h1>
+        <h1 sx={{ mb: 3, color: 'endlessPotential' }}>Heading</h1>
         <Divider {...args} />
       </div>
     )}
     {args.orientation && args.orientation === 'vertical' && (
       <div className="flex-row">
-        <h2 sx={{ m: 0, p: 2 }}>Menu Item</h2>
+        <h2 sx={{ color: 'endlessPotential', m: 0, p: 2 }}>Menu Item</h2>
         <Divider {...args} />
-        <h2 sx={{ m: 0, p: 2 }}>Menu Item</h2>
+        <h2 sx={{ color: 'endlessPotential', m: 0, p: 2 }}>Menu Item</h2>
       </div>
     )}
   </ThemeProvider>

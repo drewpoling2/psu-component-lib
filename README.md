@@ -14,7 +14,7 @@
 
 `npm run lint:format`
 
-## To make new component
+## To make new component, story, and test
 
 `npm run component`
 
