@@ -1,9 +1,6 @@
 {
-  "name": "exe-psu-lib",
+  "name": "@exe-psu-lib/organisms",
   "version": "1.0.0",
-  "workspaces": [
-    "packages/*"
-  ],
   "main": "dist/index.js",
   "module": "dist/index.es.js",
   "scripts": {
@@ -85,6 +82,8 @@
     "@mui/material": "^5.11.0",
     "@storybook/addon-docs": "^6.5.14",
     "@storybook/theming": "^6.5.14",
-    "yarn": "^1.22.19"
+    "yarn": "^1.22.19",
+    "@exe-psu-lib/style-engine": "1.0.0",
+    "@exe-psu-lib/atoms": "1.0.0"
   }
 }

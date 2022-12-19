@@ -7,7 +7,12 @@ module.exports = {
   core: {
     builder: 'webpack5',
   },
-  stories: ['../src/**/*.stories.mdx', '../src/**/*.stories.@(js|jsx|ts|tsx)'],
+  stories: [
+    '../packages/organisms/src/**/*.stories.mdx',
+    '../packages/organisms/src/**/*.stories.@(js|jsx|ts|tsx)',
+    '../packages/atoms/src/**/*.stories.mdx',
+    '../packages/atoms/src/**/*.stories.@(js|jsx|ts|tsx)',
+  ],
   addons: [
     {
       name: '@storybook/addon-essentials',

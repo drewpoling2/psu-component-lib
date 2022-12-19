@@ -1,9 +1,6 @@
 {
-  "name": "exe-psu-lib",
+  "name": "@exe-psu-lib/style-engine",
   "version": "1.0.0",
-  "workspaces": [
-    "packages/*"
-  ],
   "main": "dist/index.js",
   "module": "dist/index.es.js",
   "scripts": {
