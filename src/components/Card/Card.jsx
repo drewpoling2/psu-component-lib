@@ -1,58 +1,123 @@
-/* eslint-disable no-undef */
+/** @jsxRuntime classic */
 /** @jsx jsx */
-import { jsx } from 'theme-ui';
-import { Link } from 'gatsby';
+import { jsx, ThemeProvider } from 'theme-ui';
+import theme from '../../theme';
+import PropTypes from 'prop-types';
+import '../../global.css';
+/**
+ * 
 
-export const Card = ({ item, index }) => {
+Use the Card component in your ui.
+
+<br>
+<br>
+<h3>Basic Card</h3>
+Card description 
+*/
+
+export const Card = ({
+  sx,
+  children,
+  variant,
+  color,
+  size,
+  backgroundImage,
+  borderRadius,
+}) => {
+  const cardVariants = {
+    outlined: {
+      border: `1px solid ${color}`,
+    },
+    outlinedThick: {
+      border: `25px solid ${color}`,
+    },
+    solid: {
+      backgroundColor: `${color}`,
+    },
+    transparent: {
+      backgroundColor: 'none',
+    },
+  };
+
+  const sizeObj = {
+    s: { p: 3 },
+    m: { p: 4 },
+    lg: { p: 5 },
+  };
+
   return (
-    <div
-      className="flex-col"
-      sx={{
-        width: '305px',
-      }}
-    >
-      <div
-        className="flex items-center justfiy-center pointer bg-no-repeat bg-cover bg-center"
-        sx={{
-          height: '260px',
-        }}
-        style={{
-          backgroundImage: `url(${item.image.gatsbyImageData.images.fallback.src})`,
-        }}
-        alt={'Psu Altoona Logo'}
-        onClick={() => console.log('Logo')}
-      ></div>
-      <div
-        sx={{
-          py: 3,
-        }}
-      >
-        <h2 sx={{ my: 2, p: 0, lineHeight: '1.625rem' }}>
-          <Link
-            id={`quicklink-${index}`}
-            sx={{
-              fontFamily: 'roboto-slab-var',
-              fontSize: 'xl',
-              textDecoration: 'none',
-            }}
-            to={`${item.slug}`}
-          >
-            {item.cardTitle}
-          </Link>
-        </h2>
-        <h4
-          className="uppercase"
+    <ThemeProvider theme={theme}>
+      {backgroundImage ? (
+        <div
+          className={`bg-cover bg-center bg-no-repeat rounded-${borderRadius}`}
+          style={{
+            backgroundImage: `linear-gradient(rgba(30, 64, 124, 0.7) 70%, rgba(39, 71, 129, 0.3)), url(${backgroundImage})`,
+          }}
           sx={{
-            color: 'oldCoaly',
-            mt: '1.25rem',
-            fontSize: '1.125rem',
-            letterSpacing: '.54px',
-            lineHeight: '1.25rem',
+            ...sizeObj[size],
+            ...cardVariants[variant],
+            ...sx,
           }}
         >
-          {item.cardDescription}
-        </h4>
-      </div>
-    </div>
+          {children}
+        </div>
+      ) : (
+        <div
+          className={`rounded-${borderRadius}`}
+          sx={{
+            ...sizeObj[size],
+            ...cardVariants[variant],
+            ...sx,
+          }}
+        >
+          {children}
+        </div>
+      )}
+    </ThemeProvider>
   );
+};
+
+Card.propTypes = {
+  /**
+   * Optional extra sx props for styling using the theme object
+   */
+  sx: PropTypes.any,
+
+  /**
+   * Color of border or background depending on variant
+   */
+  color: PropTypes.string,
+
+  /**
+   * Optional background image for card
+   */
+  backgroundImage: PropTypes.any,
+
+  /**
+   * Card variants
+   */
+  variant: PropTypes.oneOf([
+    'outlined',
+    'solid',
+    'transparent',
+    'outlinedThick',
+  ]),
+
+  /**
+   * Size for card padding
+   */
+  size: PropTypes.oneOf(['s', 'm', 'lg']),
+
+  /**
+   * Card border radius
+   */
+  borderRadius: PropTypes.oneOf(['none', 's', 'm', 'lg', 'xl', '2xl', '3xl']),
+  children: PropTypes.any,
+};
+
+Card.defaultProps = {
+  color: `${theme.colors.beaverBlue}`,
+  variant: 'outlined',
+  size: 'm',
+  borderRadius: 'none',
 };

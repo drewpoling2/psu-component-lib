@@ -14,11 +14,13 @@ Use typography to present your design and content as clearly and efficiently as 
 Too many type sizes and styles at once can spoil any layout. A typographic scale has a limited set of type sizes that work well together along with the layout grid.
 */
 
-export const Type = ({ text, size, variant, extraSx }) => {
+export const Type = ({ text, size, variant, sx, className }) => {
   const Variant = variant;
   return (
     <ThemeProvider theme={theme}>
-      <Variant sx={{ ...extraSx, fontSize: `${size}` }}>{text}</Variant>
+      <Variant className={`${className}`} sx={{ ...sx, fontSize: `${size}` }}>
+        {text}
+      </Variant>
     </ThemeProvider>
   );
 };
@@ -56,7 +58,12 @@ Type.propTypes = {
   /**
    * Optional extra sx props for styling using the theme object
    */
-  extraSx: PropTypes.any,
+  sx: PropTypes.any,
+
+  /**
+   * Optional extra classes for styling using the global.css
+   */
+  className: PropTypes.string,
 };
 
 Type.defaultProps = {

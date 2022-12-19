@@ -185,6 +185,13 @@ const theme = {
       letterSpacing: 'button',
       lineHeight: 'heading',
     },
+    chip: {
+      fontFamily: 'heading',
+      fontWeight: 'heading',
+      cursor: 'pointer',
+      letterSpacing: '.03em',
+      lineHeight: '20px',
+    },
     copyP: {
       fontFamily: 'body',
       fontWeight: 'body',
@@ -234,6 +241,22 @@ const theme = {
     },
     solid: {
       borderStyle: 'solid',
+    },
+  },
+  chips: {
+    default: {
+      backgroundColor: 'none',
+      color: 'oldCoaly',
+      px: '16px',
+      py: '12px',
+      mx: 0,
+      border: '2px solid #444',
+      '&:hover': {
+        backgroundColor: 'limestoneLight',
+        color: 'paLink',
+        textDecoration: 'underline',
+        border: '2px solid #e4e5e7',
+      },
     },
   },
   buttons: {
@@ -317,6 +340,7 @@ const theme = {
     },
     filled: { backgroundColor: '#E4E5E7', borderRadius: '2px' },
   },
+
   //built in style object
   styles: {
     root: {

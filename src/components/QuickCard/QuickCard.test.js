@@ -3,7 +3,7 @@
 /* eslint-disable testing-library/prefer-find-by */
 import React from 'react';
 import Enzyme, { shallow, mount } from 'enzyme';
-import Card from './Card';
+import QuickCard from './QuickCard';
 import { render, screen, fireEvent } from '@testing-library/react';
 import Adapter from '@wojtekmaj/enzyme-adapter-react-17';
 import { perf, wait } from 'react-performance-testing';
@@ -15,18 +15,18 @@ Enzyme.configure({ adapter: new Adapter() });
 
 const Props = {};
 
-describe('Card', () => {
+describe('QuickCard', () => {
   let wrapper;
 
   //initializes wrapper for each test & renders component
   beforeEach(() => {
-    render(<Card />);
-    wrapper = mount(<Card />);
+    render(<QuickCard />);
+    wrapper = mount(<QuickCard />);
   });
 
   //renders Card component
   it('Renders Card correctly', () => {
-    shallow(<Card />);
+    shallow(<QuickCard />);
     //screen.debug();
   });
 

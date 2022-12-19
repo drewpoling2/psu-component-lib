@@ -1,7 +1,7 @@
 /** @jsx jsx */
 import { jsx, Container } from 'theme-ui';
 import React from 'react';
-import { Card } from '../Card/Card';
+import { QuickCard } from '../QuickCard/QuickCard';
 import { graphql } from 'gatsby';
 export const QuickLinks = ({ heading, data, index }) => {
   return (
@@ -38,7 +38,9 @@ export const QuickLinks = ({ heading, data, index }) => {
           }}
         >
           {data.quickLinkList.map((item, index) => {
-            return <Card item={item} key={index} index={index}></Card>;
+            return (
+              <QuickCard item={item} key={index} index={index}></QuickCard>
+            );
           })}
         </div>
       </div>

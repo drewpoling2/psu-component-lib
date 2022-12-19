@@ -1,17 +1,15 @@
 /* eslint-disable no-undef */
 import React from 'react';
-import Box from '../components/Box';
+import { List } from '../components/List';
 
-const component = Box;
+const component = List;
 
 export default {
   title: component.name || component.displayName || 'undefined component name',
   component: component,
 };
 
-const Template = (args) => <Box {...args} />;
+const Template = (args) => <List {...args} />;
 
 export const Default = Template.bind({});
 Default.args = {};
-
-

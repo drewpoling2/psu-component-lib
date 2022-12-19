@@ -1,24 +1,22 @@
+/** @jsxRuntime classic */
 /** @jsx jsx */
-import { Link } from '../Link/Link';
 import { jsx, ThemeProvider } from 'theme-ui';
 import theme from '../../theme';
 import PropTypes from 'prop-types';
-
+import '../../global.css';
+import { Link } from '../Link';
 /**
- * Buttons allow users to take actions, and make choices, with a single tap.
- * They communicate actions that users can take. They are typically placed throughout your UI, in places like:
+ * 
 
-<li>Modal windows</li>
-<li>Forms</li>
-<li>Cards</li>
-<li>Toolbars</li>
+Use the Chip component in your ui.
+
 <br>
 <br>
-<h3>Basic Button</h3>
-The Button comes with three variants: default, outlinedNavSecondary, and hotline.
+<h3>Basic Chip</h3>
+Chip description 
 */
 
-export const Button = ({
+export const Chip = ({
   onClick,
   variant = 'default',
   text = 'Add a text prop',
@@ -43,26 +41,31 @@ export const Button = ({
           display: 'flex',
           flexDirection: 'row',
           textDecoration: 'none',
-          variant: `buttons.${variant}`,
+          variant: `chips.${variant}`,
         }}
       >
-        <span sx={{ variant: 'text.button' }}>{text}</span>
+        <span
+          className={disabled ? 'disabled' : ''}
+          sx={{ fontSize: '18px !important', variant: 'text.chip' }}
+        >
+          {text}
+        </span>
       </Link>
     </ThemeProvider>
   );
 };
 
-Button.propTypes = {
+Chip.propTypes = {
   /**
    * String representing href or external link for routing
    */
   to: PropTypes.string,
   /**
-   * What variant should the button be?
+   * Chip variants
    */
-  variant: PropTypes.oneOf(['default', 'hotline', 'outlinedNavSecondary']),
+  variant: PropTypes.oneOf(['default']),
   /**
-   * Button contents
+   * Chip contents
    */
   text: PropTypes.string.isRequired,
   /**
@@ -79,7 +82,7 @@ Button.propTypes = {
   props: PropTypes.any,
 };
 
-Button.defaultProps = {
+Chip.defaultProps = {
   variant: 'default',
-  text: 'Button',
+  text: 'Chip',
 };

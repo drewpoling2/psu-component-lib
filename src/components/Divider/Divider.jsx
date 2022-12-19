@@ -2,30 +2,35 @@
 import { jsx } from 'theme-ui';
 import theme from '../../theme';
 import PropTypes from 'prop-types';
-import { Type } from '../Type';
 const colors = theme.colors;
 
-export const Divider = ({ orientation, variant, color, extraSx }) => {
+export const Divider = ({ orientation, variant, color, sx, thickness }) => {
+  const thicknessObj = {
+    s: '1px',
+    m: '3px',
+    lg: '5px',
+  };
+
   //const sizeObj = { s: '60%', m: '80%', lg: '100%' };
   const orientationObj = {
     vertical: {
       width: '100%',
       //height: `${sizeObj[size]}`,
       height: '100%',
-      borderRight: `2px ${variant} ${color}`,
+      borderRight: `${thicknessObj[thickness]} ${variant} ${color}`,
     },
     horizontal: {
       //width: `${sizeObj[size]}`,
       width: '100%',
       height: '100%',
-      borderBottom: `2px ${variant} ${color}`,
+      borderBottom: `${thicknessObj[thickness]} ${variant} ${color}`,
     },
   };
   const sxVar = orientationObj[orientation];
 
   return (
     <div className="flex justify-center">
-      <div sx={{ ...extraSx, ...sxVar }}></div>
+      <div sx={{ ...sx, ...sxVar }}></div>
     </div>
   );
 };
@@ -53,9 +58,14 @@ Divider.propTypes = {
   color: PropTypes.string,
 
   /**
+   * Thickness of Divider
+   */
+  thickness: PropTypes.string,
+
+  /**
    * Optional extra sx props for styling using the theme object
    */
-  extraSx: PropTypes.any,
+  sx: PropTypes.any,
 };
 
 Divider.defaultProps = {
@@ -63,4 +73,5 @@ Divider.defaultProps = {
   variant: 'solid',
   //size: 'lg',
   color: `${colors.endlessPotential}`,
+  thickness: 'm',
 };

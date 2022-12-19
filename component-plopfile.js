@@ -13,15 +13,21 @@ module.exports = function (plop) {
       var actions = [];
 
       actions.push(
-        {
-          type: 'add',
-          path: './src/components/{{pascalCase name}}/{{pascalCase name}}.test.js',
-          templateFile: 'plop-templates/test.js.hbs',
-        },
+        //the test template needs updated
+        // {
+        //   type: 'add',
+        //   path: './src/components/{{pascalCase name}}/{{pascalCase name}}.test.js',
+        //   templateFile: 'plop-templates/test.js.hbs',
+        // },
         {
           type: 'add',
           path: './src/components/{{pascalCase name}}/{{pascalCase name}}.jsx',
           templateFile: 'plop-templates/component.jsx.hbs',
+        },
+        {
+          type: 'add',
+          path: './src/components/{{pascalCase name}}/index.js',
+          templateFile: 'plop-templates/index.js.hbs',
         },
         {
           type: 'add',
