@@ -19,7 +19,7 @@ Chip description
 export const Chip = ({
   onClick,
   variant = 'default',
-  text = 'Add a text prop',
+  text,
   disabled,
   to,
   props,
